@@ -3,9 +3,13 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import '@/styles/index.scss';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import Valid from '@/utils/valid';
 
 Vue.config.productionTip = false;
-
+Vue.use(ElementUI);
+Vue.prototype.$Valid = Valid;
 new Vue({
   router,
   store,
